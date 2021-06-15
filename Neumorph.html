@@ -42,27 +42,27 @@
                 <div>
                     <ul>
                         <li>
-                            <a href="#Mawad" class="cardtext collapsiblehead collapsiblehead--active">
+                            <a data-for="Mawad" class="cardtext collapsiblehead">
                                 <u><strong>Mawad&nbspTeam</strong></u>
                             </a>
                         </li>
                         <li>
-                            <a href="#Editing" class="cardtext collapsiblehead">
+                            <a data-for="Editing" class="cardtext collapsiblehead">
                                 <u><strong>Editing&nbspTeam</strong></u>
                             </a>
                         </li>
                         <li>
-                            <a href="#Scriptwriting" class="cardtext collapsiblehead">
+                            <a data-for="Scriptwriting" class="cardtext collapsiblehead">
                                 <u><strong>Scriptwriting&nbspTeam</strong></u>
                             </a>
                         </li>
                         <li>
-                            <a href="#Ilqa" class="cardtext collapsiblehead">
+                            <a data-for="Ilqa" class="cardtext collapsiblehead">
                                 <u><strong>Ilqa&nbspTeam</strong></u>
                             </a>
                         </li>
                         <li>
-                            <a href="#Nazam" class="cardtext collapsiblehead">
+                            <a data-for="Nazam" class="cardtext collapsiblehead">
                                 <u><strong>Nazam&nbspTeam</strong></u>
                             </a>
                         </li>
@@ -407,28 +407,31 @@
 
 
         document.querySelectorAll(".collapsiblehead").forEach(button => {
-            button.addEventListener("click",() => {
+            button.addEventListener("click", () => {
 
-                var collapsibleBodyID = button.getAttribute("href").substr(1)
+                var collapsibleBodyID = button.getAttribute("data-for")
                 var collapsibleBody = document.getElementById(collapsibleBodyID);
 
-                document.querySelectorAll(".collapsiblehead").forEach(b => {
-                    if (b.classList.contains("collapsiblehead--active")){
-                        var collapsibleBody = document.getElementById(b.getAttribute("href").substr(1))
-                        collapsibleBody.style.maxHeight = 0;
-                        b.classList.toggle("collapsiblehead--active");
+                if (button.classList.contains("collapsiblehead--active")) {
+                    button.classList.toggle("collapsiblehead--active")
+                    collapsibleBody.style.height = 0;
+                }
+                else {
+                    document.querySelectorAll(".collapsiblehead").forEach(b => {
+                        if (b.classList.contains("collapsiblehead--active")) {
+                            var collapsibleBody = document.getElementById(b.getAttribute("data-for"))
+                            collapsibleBody.style.height = 0;
+                            b.classList.toggle("collapsiblehead--active");
+                        }
+                    });
+                    button.classList.toggle("collapsiblehead--active")
+                    if (button.classList.contains("collapsiblehead--active")) {
+                        collapsibleBody.style.height = collapsibleBody.scrollHeight + "px"
                     }
-                });
-
-                button.classList.toggle("collapsiblehead--active")
-
-                if(button.classList.contains("collapsiblehead--active")){
-                    collapsibleBody.style.maxHeight = collapsibleBody.scrollHeight + "px"
+                    else {
+                        collapsibleBody.style.height = 0;
+                    }
                 }
-                else{
-                    collapsibleBody.style.maxHeight = 0;
-                }
-                
             });
         });
     </script>

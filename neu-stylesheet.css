@@ -3,6 +3,7 @@ body {
   font-family: 'Roboto', sans-serif;
   color:#770f0f;
   text-shadow: 4px 4px 7px #83580b, -4px -4px 7px #e3b24a;
+  scroll-behavior: smooth;
 }
 
 .imgcenter {
@@ -68,7 +69,7 @@ ul {
   flex-grow: 1;
   text-align: center;
   line-height: 48px;
-  height: 48px;
+  height: 50px;
   padding: 0px 24px;
   margin: 0;
   text-transform: uppercase;
@@ -111,21 +112,24 @@ ul {
   cursor: pointer;
   outline: none;
   text-align: center;
-  transition: 0.2s;
+  transition: .5s;
 }
 
 .collapsiblehead--active {
-  border-radius: 50px;
-  background: linear-gradient(145deg, #f3be4f, #cca043);
-  box-shadow:  20px 20px 20px #c1973f,
-             -20px -20px 20px #ffcd55;
+  border-radius: 20px;
+  background: #e3b24a;
+  border: none;
+  outline: none;
+  background: #e3b24a;
+  box-shadow: inset 3px 6px 24px #c1973f,
+            inset -3px -6px 16px #ffcd55;
+            
 }
 
 .collapsiblebody {
   overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.2s;
-
+  height: 0;
+  transition: height .5s linear;
   padding: 0 5px;
 }
 
