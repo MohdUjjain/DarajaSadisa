@@ -112,7 +112,7 @@ ul {
   cursor: pointer;
   outline: none;
   text-align: center;
-  transition: .5s;
+  transition: .2s;
 }
 
 .collapsiblehead--active {
@@ -126,50 +126,17 @@ ul {
             
 }
 
+.collapsiblecard {
+  padding-block: 15px;
+  margin-bottom: 25px;
+  border-radius: 30px;
+  font-size: 15px;
+  box-shadow:  10px 10px 40px #c1973f,
+             -10px -10px 40px #ffcd55;
+}
+
 .collapsiblebody {
   overflow: hidden;
   height: 0;
-  transition: height .5s linear;
-  padding: 0 5px;
-}
-
-/****************************************/
-/****************************************/
-/****************************************/
-/****************************************/
-/****************************************/
-/****************************************/
-/****************************************/
-/****************************************/
-/****************************************/
-/****************************************/
-
-
-#collapsiblehead {
-  background-color: #d9b650;
-  border-bottom: 1px solid #d9b650;
-}
-
-#collapsibleheadtext{
-  color: #83580b;
-}
-
-#collapse{
-  border-top: 1px solid #d9b650;
-  border-right: 1px solid #d9b650;
-  border-left: 1px solid #d9b650;
-}
-
-#collapsiblebody{
-  border-bottom: 1px solid #d9b650;
-}
-
-#collectionhead, #collectionlist{
-  background-color: #fde994;
-  border-bottom: 1px solid #d9b650;
-  color: #83580b
-}
-
-#icons {
-  color: #d9b650;
+  transition: height .2s linear;
 }
