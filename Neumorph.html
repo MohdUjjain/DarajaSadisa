@@ -5,8 +5,6 @@
     <link href="neu-stylesheet.css" rel="stylesheet" />
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Roboto&display=swap" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
     <!--Let browser know website is optimized for mobile-->
@@ -410,20 +408,22 @@
                 var collapsibleBodyID = button.getAttribute("data-for")
                 var collapsibleBody = document.getElementById(collapsibleBodyID);
 
-                if (button.classList.contains("collapsiblehead--active")) {
-                    button.classList.toggle("collapsiblehead--active")
+                if (button.classList.contains("active")) {
+                    // Toggle Selected Collapsible Head Inactive
+                    button.classList.toggle("active")
                     collapsibleBody.style.height = 0;
                 }
                 else {
+                    // Toggle Selected Collapsible Head Active
                     document.querySelectorAll(".collapsiblehead").forEach(b => {
-                        if (b.classList.contains("collapsiblehead--active")) {
+                        if (b.classList.contains("active")) {
                             var collapsibleBody = document.getElementById(b.getAttribute("data-for"))
                             collapsibleBody.style.height = 0;
-                            b.classList.toggle("collapsiblehead--active");
+                            b.classList.toggle("active");
                         }
                     });
-                    button.classList.toggle("collapsiblehead--active")
-                    if (button.classList.contains("collapsiblehead--active")) {
+                    button.classList.toggle("active")
+                    if (button.classList.contains("active")) {
                         collapsibleBody.style.height = collapsibleBody.scrollHeight + "px"
                     }
                     else {
