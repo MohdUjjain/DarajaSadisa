@@ -26,8 +26,8 @@ body {
   text-align: justify;
   text-justify: inter-word;
   font-size: 15px;
-  box-shadow:  10px 10px 40px #c1973f,
-             -10px -10px 40px #ffcd55;
+  box-shadow:  20px 20px 60px #c1973f,
+             -20px -20px 60px #ffcd55;
 }
 
 .textcenter {
@@ -57,25 +57,33 @@ ul {
   height: 50px;
   width: 100%;
   margin: 0 auto;
-  white-space: nowrap;
   box-sizing: inherit;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  box-shadow: 0px 2px 8px #c1973f,0px -2px 8px #c1973f;
+  box-shadow: 5px 8px 10px #c1973f, -5px -4px 10px #c1973f;
   border-radius: 20px;
 }
 
+/* .card ul::-webkit-scrollbar {
+  width: 10px;
+  display:inline
+}
+
+.card ul::-webkit-scrollbar-track {
+  background: transparent
+}
+
+.card ul::-webkit-scrollbar-thumb {
+  background:#c1973f;
+
+} */
+
 .card ul li {
   flex-grow: 1;
-  text-align: center;
   line-height: 48px;
   height: 50px;
   padding: 0px 24px;
   margin: 0;
   text-transform: uppercase;
-  box-sizing: inherit;
   padding-left: 0;
-  white-space: nowrap;
   font-weight: normal;
 }
 
@@ -87,11 +95,7 @@ ul {
   font-size: 14px;
   text-overflow: ellipsis;
   overflow: hidden;
-  transition: color .28s ease, background-color .28s ease;
-  text-decoration: none;
   -webkit-tap-highlight-color: transparent;
-  background-color: transparent;
-  box-sizing: inherit;
   cursor: pointer;
   text-align: center;
   text-transform: uppercase;
@@ -112,7 +116,7 @@ ul {
   cursor: pointer;
   outline: none;
   text-align: center;
-  transition: .2s;
+  transition: .4s ease-in-out;
 }
 
 .collapsiblehead--active {
@@ -131,12 +135,12 @@ ul {
   margin-bottom: 25px;
   border-radius: 30px;
   font-size: 15px;
-  box-shadow:  10px 10px 40px #c1973f,
-             -10px -10px 40px #ffcd55;
+  box-shadow:  20px 20px 60px #c1973f,
+             -20px -20px 60px #ffcd55;
 }
 
 .collapsiblebody {
   overflow: hidden;
   height: 0;
-  transition: height .2s linear;
+  transition: height .4s ease-in-out;
 }
