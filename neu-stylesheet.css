@@ -21,7 +21,7 @@ body {
   margin-right: 5%;
 }
 
-.card {
+.maincard {
   padding-inline: 30px;
   padding-block: 15px;
   margin-bottom: 25px;
@@ -41,7 +41,7 @@ body {
   font-family: 'Amiri', serif;
 }
 
-.card hr {
+hr {
   border: 1px solid #770f0f;
   background-color: #770f0f;
   box-shadow: 3px 3px 7px #83580b, -4px -4px 7px #e3b24a
@@ -51,7 +51,7 @@ ul {
   list-style-type: none;
 }
 
-.card ul {
+.maincard ul {
   background-color: #e3b24a !important;
   padding-left: 0;
   display: flex;
@@ -64,9 +64,10 @@ ul {
   box-sizing: inherit;
   box-shadow: 5px 8px 10px #c1973f, -5px -4px 10px #c1973f;
   border-radius: 20px;
+  outline: none;
 }
 
-.card ul li {
+.maincard ul li {
   position: relative;
   flex-grow: 1;
   line-height: 50px;
@@ -78,7 +79,7 @@ ul {
   font-weight: normal;
 }
 
-.card ul li a {
+.maincard ul li a {
   padding: 0 12px;
   display: block;
   width: 100%;
@@ -94,7 +95,7 @@ ul {
   color:#770f0f;
 }
 
-.card ul li::before{
+.maincard ul li::before{
   content: "";
   position: absolute;
   left: 15px;
@@ -107,11 +108,11 @@ ul {
   transform: scaleX(0);
 }
 
-.card ul li:hover::before,.card ul li:focus::before {
+.maincard ul li:hover::before,.maincard ul li:focus::before {
   transform: scaleX(1);
 }
 
-.card .hrclear {
+.maincard .hrclear {
   clear: both;
 }
 
@@ -128,7 +129,6 @@ ul {
 
 .collapsiblehead.active {
   border-radius: 20px;
-  background: #e3b24a;
   border: none;
   outline: none;
   background: #e3b24a;
@@ -138,7 +138,6 @@ ul {
 }
 
 .collapsiblecard {
-  padding-block: 15px;
   margin-bottom: 25px;
   border-radius: 30px;
   font-size: 15px;
@@ -150,4 +149,49 @@ ul {
   overflow: hidden;
   height: 0;
   transition: height .4s ease-in-out;
+  padding-inline: 30px;
+}
+
+.collapsiblebody .collectionhead {
+  font-size: 1.3em;
+  margin-top: 40px;
+  padding-inline-start: 30px;
+  line-height: 60px;
+  background: #e3b24a;
+  border-radius: 30px;
+  box-shadow: inset 3px 6px 24px #c1973f,
+            inset -3px -6px 16px #ffcd55;
+}
+
+.collapsiblebody .collectionblock {
+  padding-block: 15px;
+  padding-inline: 30px;
+  background: #e3b24a;
+  border-radius: 30px;
+  box-shadow: inset 4px 8px 30px #c1973f,
+            inset -4px -8px 30px #ffcd55;
+  margin-bottom: 40px;
+}
+
+.collapsiblebody .padding50 {
+  padding-inline: 50px;
+}
+
+.collectionblock .collectionlist {
+  position: relative;
+  padding-block: 15px;
+  font-size: 1.1em;
+}
+
+.collectionlist a {
+  position: absolute;
+  font-size: 1em;
+  top: 50%;
+  bottom: 50%;
+  right: 0;
+  float: right;
+}
+
+.collectionlist p {
+  clear: both;
 }
