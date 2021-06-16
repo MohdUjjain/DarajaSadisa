@@ -1,0 +1,48 @@
+body {
+  background-color: #fde994;
+  font-family: 'Roboto', sans-serif;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+
+#barnamajtitle, #ilqaName {
+    font-family: 'Amiri', serif;
+}
+
+.card, #cardtext {
+    color: #f5dd7b
+}
+
+#collapsiblehead {
+  background-color: #d9b650;
+  border-bottom: 1px solid #d9b650;
+}
+
+#collapsibleheadtext{
+  color: #83580b;
+}
+
+#collapse{
+  border-top: 1px solid #d9b650;
+  border-right: 1px solid #d9b650;
+  border-left: 1px solid #d9b650;
+}
+
+#collapsiblebody{
+  border-bottom: 1px solid #d9b650;
+}
+
+#collectionhead, #collectionlist{
+  background-color: #fde994;
+  border-bottom: 1px solid #d9b650;
+  color: #83580b
+}
+
+#icons {
+  color: #d9b650;
+}
