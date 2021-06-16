@@ -43,6 +43,7 @@ body {
 
 .card hr {
   border: 1px solid #770f0f;
+  background-color: #770f0f;
   box-shadow: 3px 3px 7px #83580b, -4px -4px 7px #e3b24a
 }
 
@@ -112,7 +113,6 @@ ul {
 
 .card .hrclear {
   clear: both;
-  color:#770f0f;
 }
 
 .collapsiblehead {
