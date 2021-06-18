@@ -51,6 +51,8 @@ ul {
   list-style-type: none;
 }
 
+/* Main Card Design Start */
+
 .maincard ul {
   background-color: #e3b24a !important;
   padding-left: 0;
@@ -112,35 +114,33 @@ ul {
   transform: scaleX(1);
 }
 
-.maincard .hrclear {
-  clear: both;
-}
-
 .collapsiblehead {
-  display: block;
-  width: 100%;
   padding: 15px;
   border: none;
-  cursor: pointer;
   outline: none;
-  text-align: center;
   transition: .4s ease-in-out;
 }
 
 .collapsiblehead.active {
-  border-radius: 20px;
   border: none;
   outline: none;
+
   background: #e3b24a;
+  border-radius: 20px;
   box-shadow: inset 3px 6px 24px #c1973f,
             inset -3px -6px 16px #ffcd55;
-            
 }
+
+/* Main Card Design End */
+
+/* Collapsible Card Design Start */
 
 .collapsiblecard {
   margin-bottom: 25px;
-  border-radius: 30px;
   font-size: 15px;
+
+  background: #e3b24a;
+  border-radius: 30px;
   box-shadow:  20px 20px 60px #c1973f,
              -20px -20px 60px #ffcd55;
 }
@@ -152,46 +152,40 @@ ul {
   padding-inline: 30px;
 }
 
-.collapsiblebody .collectionhead {
-  font-size: 1.3em;
-  margin-top: 40px;
-  padding-inline-start: 30px;
-  line-height: 60px;
+.collapsiblebody .collectionhead, .collapsiblebody .collectionblock {
   background: #e3b24a;
   border-radius: 30px;
   box-shadow: inset 3px 6px 24px #c1973f,
             inset -3px -6px 16px #ffcd55;
+  padding-inline: 30px;
+}
+
+.collapsiblebody .collectionhead {
+  margin-top: 40px;
+  line-height: 60px;
+  font-size: 1.3em;
 }
 
 .collapsiblebody .collectionblock {
   padding-block: 15px;
-  padding-inline: 30px;
-  background: #e3b24a;
-  border-radius: 30px;
-  box-shadow: inset 4px 8px 30px #c1973f,
-            inset -4px -8px 30px #ffcd55;
   margin-bottom: 40px;
 }
 
 .collectionblock .collectionlist {
   display: flex;
-  position: relative;
   padding-block: 15px;
   font-size: 1.1em;
 }
 
-.collapsiblebody .collectionlist span {
+.collectionlist span {
   padding-inline-end: 10%;
   flex-basis: 95%;
 }
 
-.collapsiblebody .collectionlist a {
+.collectionlist a {
   line-height: 100%;
   margin: auto 0;
-}
-
-.collapsiblebody .collectionlist a i {
-  height: 100%;
-  width: 100%;
   font-size: 24px;
 }
+
+/* Collapsible Card Design End */
