@@ -2,10 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
 
 body {
-  background: #e3b24a;
   font-family: 'Antic Slab', serif;
   color:#770f0f;
-  text-shadow: 4px 4px 7px #83580b, -4px -4px 7px #e3b24a;
+  text-shadow: 4px 4px 7px #83580b,
+              -4px -4px 7px #e3b24a;
+  background: #e3b24a;
   scroll-behavior: smooth;
 }
 
@@ -21,18 +22,6 @@ body {
   margin-right: 5%;
 }
 
-.maincard {
-  padding-inline: 30px;
-  padding-block: 15px;
-  margin-bottom: 25px;
-  border-radius: 30px;
-  text-align: justify;
-  text-justify: inter-word;
-  font-size: 15px;
-  box-shadow:  20px 20px 60px #c1973f,
-             -20px -20px 60px #ffcd55;
-}
-
 .textcenter {
   text-align: center;
 }
@@ -42,9 +31,10 @@ body {
 }
 
 hr {
+  background: #770f0f;
   border: 1px solid #770f0f;
-  background-color: #770f0f;
-  box-shadow: 3px 3px 7px #83580b, -4px -4px 7px #e3b24a
+  box-shadow: 3px 3px 7px #83580b,
+             -4px -4px 7px #e3b24a
 }
 
 ul {
@@ -53,48 +43,71 @@ ul {
 
 /* Main Card Design Start */
 
+.maincard {
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 15px;
+
+  padding-inline: 30px;
+  padding-block: 15px;
+
+  border-radius: 30px;
+  box-shadow:  20px 20px 60px #c1973f,
+              -20px -20px 60px #ffcd55;
+
+  margin-bottom: 25px;
+}
+
 .maincard ul {
-  background-color: #e3b24a !important;
-  padding-left: 0;
-  display: flex;
-  position: relative;
-  overflow-x: auto;
-  overflow-y: hidden;
   height: 50px;
   width: 100%;
-  margin: 0 auto;
-  box-sizing: inherit;
-  box-shadow: 5px 8px 10px #c1973f, -5px -4px 10px #c1973f;
+ 
+  padding-left: 0;
+
   border-radius: 20px;
-  outline: none;
+  
+  margin: 0 auto;
+
+  position: relative;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  box-shadow: 5px 8px 10px #c1973f,
+             -5px -4px 10px #c1973f;
 }
 
 .maincard ul li {
-  position: relative;
-  flex-grow: 1;
+  font-weight: normal;
+  text-transform: uppercase;
   line-height: 50px;
   height: 50px;
+
   padding: 0px 24px;
-  margin: 0;
-  text-transform: uppercase;
   padding-left: 0;
-  font-weight: normal;
+
+  margin: 0;
+  
+  position: relative;
+  flex-grow: 1;
 }
 
 .maincard ul li a {
-  padding: 0 12px;
-  display: block;
-  width: 100%;
-  height: 100%;
+  color:#770f0f;
   font-size: 14px;
   text-overflow: ellipsis;
-  overflow: hidden;
-  -webkit-tap-highlight-color: transparent;
-  cursor: pointer;
   text-align: center;
   text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+
+  padding: 0 12px;
+  
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+  
+  -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
-  color:#770f0f;
 }
 
 .maincard ul li::before{
@@ -106,6 +119,7 @@ ul {
   height: 3px;
   background-color: #c1973f;
   border-radius: 10px;
+  
   transition: transform 300ms ease-in-out;
   transform: scaleX(0);
 }
@@ -123,12 +137,10 @@ ul {
 
 .collapsiblehead.active {
   border: none;
-  outline: none;
-
-  background: #e3b24a;
   border-radius: 20px;
+  outline: none;
   box-shadow: inset 3px 6px 24px #c1973f,
-            inset -3px -6px 16px #ffcd55;
+              inset -3px -6px 16px #ffcd55;
 }
 
 /* Main Card Design End */
@@ -136,34 +148,31 @@ ul {
 /* Collapsible Card Design Start */
 
 .collapsiblecard {
-  margin-bottom: 25px;
   font-size: 15px;
-
-  background: #e3b24a;
   border-radius: 30px;
+  margin-bottom: 25px;
   box-shadow:  20px 20px 60px #c1973f,
-             -20px -20px 60px #ffcd55;
+              -20px -20px 60px #ffcd55;
 }
 
 .collapsiblebody {
-  overflow: hidden;
   height: 0;
-  transition: height .4s ease-in-out;
   padding-inline: 30px;
+  transition: height .4s ease-in-out;
+  overflow: hidden;
 }
 
 .collapsiblebody .collectionhead, .collapsiblebody .collectionblock {
-  background: #e3b24a;
+  padding-inline: 30px;
   border-radius: 30px;
   box-shadow: inset 3px 6px 24px #c1973f,
-            inset -3px -6px 16px #ffcd55;
-  padding-inline: 30px;
+              inset -3px -6px 16px #ffcd55; 
 }
 
 .collapsiblebody .collectionhead {
-  margin-top: 40px;
-  line-height: 60px;
   font-size: 1.3em;
+  line-height: 60px;
+  margin-top: 40px;
 }
 
 .collapsiblebody .collectionblock {
@@ -172,9 +181,9 @@ ul {
 }
 
 .collectionblock .collectionlist {
-  display: flex;
   padding-block: 15px;
   font-size: 1.1em;
+  display: flex;
 }
 
 .collectionlist span {
@@ -183,9 +192,9 @@ ul {
 }
 
 .collectionlist a {
+  font-size: 24px;
   line-height: 100%;
   margin: auto 0;
-  font-size: 24px;
 }
 
 /* Collapsible Card Design End */
