@@ -65,7 +65,7 @@ ul {
   padding-left: 0;
 
   border-radius: 20px;
-  
+
   margin: 0 auto;
 
   position: relative;
@@ -94,6 +94,8 @@ ul {
 .maincard ul li a {
   color:#770f0f;
   font-size: 14px;
+  font-weight: bold;
+  text-decoration: underline;
   text-overflow: ellipsis;
   text-align: center;
   text-transform: uppercase;
@@ -189,6 +191,12 @@ ul {
 .collectionlist span {
   padding-inline-end: 10%;
   flex-basis: 95%;
+}
+
+
+.collectionlist span p:nth-child(2) {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .collectionlist a {
